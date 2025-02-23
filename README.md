@@ -60,6 +60,8 @@ The datasets undergo the following preprocessing steps:
     *   `bvnsp`: Evidence difference between vector (normal) and scalar (promoted) models.
     * `snr`: The signal to noise ratio.
 
+(Degrees of freedom, N: Normal, R: Reduced, P: Promoted ) 
+
 
 ## Machine Learning Models
 
