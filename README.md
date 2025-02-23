@@ -30,8 +30,8 @@ While general relativity only permits tensor modes, some alternative theories pr
 *   Simulating the detector's response to the gravitational wave, including its directional sensitivity, with realistic detector noise.
 *   Applying signal processing techniques (whitening and spectrogram generation) to reveal the characteristic chirp signal buried within the noise.
 
-![chirp plot](figures\wave_in_noise.png)
-![chirp plot](figures\chirp_plot.png)
+![chirp plot](figures/wave_in_noise.png)
+![chirp plot](figures/chirp_plot.png)
 
 
 ## Polarization classification with machine learning
