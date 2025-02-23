@@ -30,8 +30,8 @@ While general relativity only permits tensor modes, some alternative theories pr
 *   Simulating the detector's response to the gravitational wave, including its directional sensitivity, with realistic detector noise.
 *   Applying signal processing techniques (whitening and spectrogram generation) to reveal the characteristic chirp signal buried within the noise.
 
-
-![chirp plot.png](chirp_plot.png)
+![chirp plot](figures\wave_in_noise.png)
+![chirp plot](figures\chirp_plot.png)
 
 
 ## Polarization classification with machine learning
@@ -77,4 +77,4 @@ Accuracy random forest trained model: 76%
 
 Confusion matrix of random forest trained model:
 
-![random forest confusion matrix](rf_cfmatrix.png)
+![random forest confusion matrix](figures/rf_cfmatrix.png)
