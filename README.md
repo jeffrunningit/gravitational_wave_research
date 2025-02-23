@@ -1,8 +1,9 @@
+![Blackhole merger LIGO](figures/BHmerger_LIGO_3600.jpg)
 # Gravitational Wave Polarization Research
 
-This project uses machine learning to classify simulated gravitational wave signals into three polarization modes, based on predictions from different theories of gravity.
+This project uses **machine learning** to classify simulated gravitational wave signals into three polarization modes, based on predictions from different theories of gravity.
 
-The project uses Bayesian evidence ratios (logZ values) between polarization mode models, derived from waveform simulated data, as the features for the machine learning models. Logistic regression and random forest training are done, obtaining prediction models with accuracies of 70%~80%.
+**Bayesian evidence ratios** (logZ values) between polarization mode models, derived from waveform simulated data, are used as the features for the machine learning models. Logistic regression and random forest training are done, obtaining prediction models with accuracies of 70%~80%.
 
 ---
 
@@ -28,7 +29,7 @@ While general relativity only permits tensor modes, some alternative theories pr
 
 *   Generating a "chirp" signal using a theoretical waveform model (PyCBC).
 *   Simulating the detector's response to the gravitational wave, including its directional sensitivity, with realistic detector noise.
-*   Applying signal processing techniques (whitening and spectrogram generation) to reveal the characteristic chirp signal buried within the noise.
+*   Applying signal processing techniques (whitening, FFT and spectrogram generation) to reveal the characteristic chirp signal buried within the noise.
 
 ![chirp plot](figures/wave_in_noise.png)
 ![chirp plot](figures/chirp_plot.png)
