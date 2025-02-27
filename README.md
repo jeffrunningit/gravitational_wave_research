@@ -1,18 +1,25 @@
-![Blackhole merger LIGO](figures/BHmerger_LIGO_3600.jpg)
+<img src="figures/BHmerger_LIGO_3600.jpg" alt="Blackhole merger LIGO" width="700"/>
+
 # Gravitational Wave Polarization Research
 
-This project uses **machine learning** to classify simulated gravitational wave signals into three polarization modes, based on predictions from different theories of gravity.
+This project uses **Bayesian statistics** and **machine learning** to classify simulated gravitational wave signals into three polarization modes, based on predictions from different theories of gravity.
 
-**Bayesian evidence ratios** (logZ values) between polarization mode models, derived from waveform simulated data, are used as the features for the machine learning models. Logistic regression and random forest training are done, obtaining prediction models with accuracies of 70%~80%.
+The **Bayes factors** (logarithmic values) between polarization mode models, derived from waveform simulated data, are used as the features for the machine learning models. Logistic regression and random forest training are done, obtaining prediction models with accuracies of 70%~80%.
+
+$$
+\log K = \log\frac{P(D \mid M_1)}{P(D \mid M_2)}
+  = \log\frac{\displaystyle \int p(D \mid \theta_1, M_1)\, p(\theta_1 \mid M_1)\, d\theta_1}
+         {\displaystyle \int p(D \mid \theta_2, M_2)\, p(\theta_2 \mid M_2)\, d\theta_2}
+$$
 
 ---
 
 ### **Scientific Context**  
 Gravitational waves are ripples in spacetime caused by massive accelerating objects like merging neutron stars. LIGO detects these waves using laser interferometry. This project uses a binary neutron star merger signal from LIGO, adds realistic detector noise, and demonstrates signal processing techniques to identify the "chirp" waveform. The "chirp" is the rise in frequency which is a telltale proof of a gravitational wave signal.
 
-While general relativity only permits tensor modes, some alternative theories predict additional polarizations. Generic metric theories of gravity allow the existence of six gravitational wave polarization states which can be categorized into tensor modes, vector modes and scalar modes. Searching for non-tensorial polarization modes is a direct test of General Relativity's validity.
+While general relativity only permits tensor modes, some alternative theories predict additional polarizations. Generic metric theories of gravity allow the existence of six gravitational wave polarization states which can be categorized into tensor modes, vector modes and scalar modes. Searching for non-tensorial polarization modes is a direct test of General Relativity's validity. 
 
-
+Since the _prior_ probability of each polarization as the truth is arbitrary, the _Bayes factor_ is used as the comparison of strength of evidence between two models given a set of measured signal. 
 
 
 ## Project Structure
