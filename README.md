@@ -58,13 +58,13 @@ The datasets undergo the following preprocessing steps:
 2.  **Data Cleaning:** Rows with missing values (`NaN`) are removed to ensure data quality.
 3.  **Concatenation:** The three datasets are combined into a single DataFrame. The combined dataset is shuffled to randomize the order of data points, which is important for training machine learning models.
 4.  **SNR Filtering:** Events with a Signal-to-Noise Ratio (SNR) below 8 are removed.  This threshold is commonly used in gravitational-wave data analysis to select events with clear, detectable signals.
-5.  **Feature Engineering:** Key features are created by taking the *differences* between the `logZ` values of different polarization models.  These differences represent the relative Bayesian evidence for one model compared to another (e.g., `btnvn = logZ-tensor-N-0 - logZ-vector-N-0`). This acts as a comparisons of the likelihood of different polarization models. The original `snr` is included. This creates features that are physically meaningful and directly related to the model selection process.  The following features are generated:
-    *   `btnvn`:  Evidence difference between tensor (normal) and vector (normal) models.
-    *   `btrvr`: Evidence difference between tensor (reduced) and vector (reduced) models.
-    *   `btrsn`: Evidence difference between tensor (reduced) and scalar (normal) models.
-    *   `btnsp`: Evidence difference between tensor (normal) and scalar (promoted) models.
-    *   `bvrsn`: Evidence difference between vector (reduced) and scalar (normal) models.
-    *   `bvnsp`: Evidence difference between vector (normal) and scalar (promoted) models.
+5.  **Feature Engineering:** Key features are created by taking the *differences* between the `logZ` values of different polarization models, i.e. the _Bayes factor_ log K.  These differences represent the relative likelihood of one model being true compared to another (e.g., `btnvn = logZ-tensor-N-0 - logZ-vector-N-0`). The original `snr` is included as it affects how reliable a signal is. This creates features that are physically meaningful and directly related to the model selection process.  The following features are generated:
+    *   `btnvn`: Bayes factor between tensor (normal) and vector (normal) models.
+    *   `btrvr`: Bayes factor between tensor (reduced) and vector (reduced) models.
+    *   `btrsn`: Bayes factor between tensor (reduced) and scalar (normal) models.
+    *   `btnsp`: Bayes factor between tensor (normal) and scalar (promoted) models.
+    *   `bvrsn`: Bayes factor between vector (reduced) and scalar (normal) models.
+    *   `bvnsp`: Bayes factor between vector (normal) and scalar (promoted) models.
     * `snr`: The signal to noise ratio.
 
 (Degrees of freedom, N: Normal, R: Reduced, P: Promoted ) 
